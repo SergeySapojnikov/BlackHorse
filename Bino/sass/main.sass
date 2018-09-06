@@ -1,0 +1,327 @@
+@import 'fonts'
+@import 'icon-font'
+
+.section-frame
+	max-width: 1170px
+	margin: 0 auto
+.header
+	height: 100vh
+	background-image: url("../images/slider-bg.jpg")
+	background-position:  center
+	background-size: cover
+	background-repeat: no-repeat
+	background-attachment: fixed
+.header-frame
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding-top: 30px
+.topnav
+	display: flex
+	li
+		margin-right: 50px
+		&:last-child
+			margin-right: 0
+	a
+		text-transform: uppercase
+		font: 14px OpenSans-Bold
+		color: #fff
+		&:after
+	      content: "";
+	      height: 2px;
+	      width: 0%;
+	      display: block
+	      margin-top: 10px
+	      background-color: #e74c3c
+	      transition: width .5s ease-in-out
+.topnav a:hover
+	color: #e74c3c
+.topnav a:hover:after
+	 width: 100%
+.burger
+  width: 35px
+  height: 32px
+  margin: auto
+  display: none
+  cursor: pointer
+  position: relative
+  &:before, span, &:after
+    width: 100%
+    height: 4px
+    display: block
+    background: #fff
+    border-radius: 2px
+    position: absolute
+    opacity: 1
+  &:before, &:after
+    transition: top 0.35s cubic-bezier(0.23, 1, 0.32, 1), transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 1.15s cubic-bezier(0.86, 0, 0.07, 1)
+    -webkit-transition: top 0.35s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 1.15s cubic-bezier(0.86, 0, 0.07, 1)
+    content: ""
+  &:before
+    top: 4px
+  span
+    top: 15px
+  &:after
+    top: 26px
+  &:hover
+    &:before
+      top: 7px
+    &:after
+      top: 23px
+  &.cross
+    span
+      opacity: 0
+    &:before, &:after
+      top: 40%
+    &:before
+      -webkit-transform: rotate(45deg)
+      -moz-transform: rotate(45deg)
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=5)
+    &:after
+      -webkit-transform: rotate(-45deg)
+      -moz-transform: rotate(-45deg)
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-5)
+  &:focus
+    outline: none
+.cd-main-nav-wrapper-active
+	display: block
+	position: absolute
+	top: 50px
+.cd-main-nav-active
+	flex-direction: column
+.sl, .slick-list 
+	max-width: 1300px
+.slick-initialized .slick-slide
+	display: flex
+	outline: none
+.header__slider
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-top: 13%
+.slide-item
+	display: flex
+	flex-direction: column
+	align-items: center
+.slide-item__text
+	font: 24px Source-Sans-Pro-Regular
+	color: #f4f5f9
+	margin-bottom: 40px
+.slide-item__title
+	font: 72px OpenSans-Bold
+	color: #f4f5f9
+	margin-bottom: 40px
+.circle
+	width: 7px
+	height: 7px
+	background-color: #e74c3c
+	border-radius: 50%
+	margin: 0 15px
+.slide-line
+	display: flex
+	align-items: center
+	justify-content: center
+	&:before
+		content: ""
+		width: 80px
+		height: 1px
+		display: block
+		background-color: #f1ebe7
+	&:after
+		content: ""
+		width: 80px
+		height: 1px
+		display: block
+		background-color: #f1ebe7
+.slide-item__description
+	max-width: 585px
+	margin-top: 45px
+	text-align: center
+	font: 14px OpenSans-Regular
+	color: #cbc6c0
+.slide-btn
+	display: flex
+	margin-top: 50px
+	a
+		width: 225px
+		height: 50px
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 2px
+		border: 1px solid #fff
+		font: 14px OpenSans-Bold
+		color: #fff
+		text-transform: uppercase
+		transition-duration: 0.7s
+		&:first-child
+			margin-right: 30px
+		&:hover
+			background-color: #e74c3c
+			border: 1px solid #e74c3c
+.arrow-left, .arrow-right
+	width: 45px
+	height: 45px
+	display: flex
+	justify-content: center
+	align-items: center
+	background-color: #6f6863
+	cursor: pointer
+	transition-duration: 0.7s
+	i:before
+		color: #3c3631
+	&:hover
+		background-color: #e74c3c
+		i:before
+			color: #fff
+.arrow-right
+	margin-right: 50px
+.arrow-left
+	margin-left: 50px
+	i
+		transform: rotate(180deg)
+.line-blog
+	display: flex
+.revers
+	.blog-item
+		flex-direction: row-reverse
+.blog-item
+	width: calc(100vw / 2)
+	height: calc(100vw / 4)
+	display: flex
+.blog-preview, .blog-description
+	width: 50%
+	height: 100%
+.blog-preview
+	img
+		width: 100%
+		height: 100%
+.blog-description
+	display: flex
+	flex-direction: column
+	justify-content: center
+	background-color: #e74c3c
+	padding: 70px 50px
+	box-sizing: border-box
+	position: relative
+	&:before
+			content: ""
+			display: block
+			position: absolute
+			border: 35px solid transparent
+.no-revers
+	.blog-description
+		&:before
+			border-right: 35px solid #e74c3c
+			left: -70px
+.revers
+	.blog-description
+		&:before
+			border-left: 35px solid #e74c3c
+			right: -70px
+.blog-description__category
+	font: 14px OpenSans-Regular
+	color: #fff
+	margin-bottom: 30px
+.blog-description__title
+	font: 24px Source-Sans-Pro-Semibold
+	color: #fff
+	margin-bottom: 50px
+	&:after
+		content: ""
+		width: 45px
+		height: 4px
+		display: block
+		background-color: #fff
+		margin-top: 15px
+.blog-description__text
+	font: 16px OpenSans-Regular
+	color: #fff
+	line-height: 30px
+.blog-description__btn
+	display: block
+	flex-direction: column
+	font: 18px OpenSans-SemiboldItalic
+	color: #fff
+	margin-top: 30px
+	&:hover
+		text-decoration: underline
+.footer
+	background-image: url("../images/footer-bg.jpg")
+	background-repeat: no-repeat
+	background-size: cover
+	background-attachment: fixed
+	background-position: center
+.footer__promo
+	padding-top: 155px
+	text-align: center
+.footer__promo-title
+	font: 36px OpenSans-Regular
+	color: #fff
+	margin-bottom: 25px
+	span
+		font-family: OpenSans-Bold
+.footer__promo-text
+	font: 18px OpenSans-Regular
+	color: #d9d8d6
+	margin-bottom: 70px
+.footer__promo-btn
+	width: 255px
+	height: 55px
+	display: flex
+	justify-content: center
+	align-items: center
+	background-color: #e74c3c
+	border: 1px solid #e74c3c
+	border-radius: 2px
+	font: 14px OpenSans-Bold
+	color: #fff
+	text-transform: uppercase
+	margin: 0 auto
+	transition-duration: 1s
+	&:hover
+		background-color: transparent
+.footer__icons
+	margin-top: 135px
+	background-color: #202020
+	position: relative
+.icon-list
+	ul
+		display: flex
+	li
+		margin-right: 25px
+		&:last-child
+			margin-right: 0
+.fa
+	font-size: 21px
+	&:hover:before
+		color: #e74c3c
+.fa-rss
+	font-size: 19px
+.footer__icons-frame
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 35px 0
+.reserved
+	font: 14px OpenSans-Semibold
+	color: #999999
+.btn-top
+	a
+		width: 55px
+		height: 55px
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: #e74c3c
+		border: 2px solid transparent
+		border-radius: 50%
+		position: absolute
+		top: -27.5px
+		right: 50px
+		transform: rotate(-90deg);
+		transition-duration: 1s
+		box-sizing: border-box
+		&:hover
+			background-color: transparent
+			border: 2px solid #e74c3c
